@@ -10,5 +10,7 @@ urlpatterns = [
     # show all topics
     path('topics/', views.topics, name='topics'),
     # web with courent topic and show details
-    path('topics/<int:topic_id>/', views.topic, name='topic')
+    path('topics/<int:topic_id>/', views.topic, name='topic'),
+    # web to add new topic
+    path('new_topic/', views.new_topic, name='new_topic'),
 ]

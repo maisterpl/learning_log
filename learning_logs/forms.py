@@ -4,6 +4,6 @@ from .models import Topic
 
 class TopicForm(forms.ModelForm):
     class Meta:
-        mode = Topic
+        model = Topic
         fields = ['text']
         labels = {'text': ''}
