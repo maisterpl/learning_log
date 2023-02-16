@@ -1,6 +1,7 @@
 
+# Folders
 venv/
 **/__pycache__
 
 # API key
-.env
+.env/
