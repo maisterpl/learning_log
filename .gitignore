@@ -5,4 +5,4 @@ venv/
 
 # API key
 .env2
-.env
+*.env
