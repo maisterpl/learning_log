@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     # my apps
     'learning_logs',
     'users',
+    # Application another firms
+    'bootstrap4',
     # default django apps
     'django.contrib.admin',
     'django.contrib.auth',
