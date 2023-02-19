@@ -1,14 +1,26 @@
 {% extends "learning_logs/base.html" %}
 
+{% load bootstrap4 %}
+
+{% block page_header %}
+    <h2>Edit entry</h2>
+{% endblock page_header %}
+
 {% block content %}
-    <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+    <div class="card">
+        <div class="card-header">
+            <h5>Topic: <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></h5>
+        </div>
 
-    <p>Edit entry:</p>
-
-    <form action="{% url 'learning_logs:edit_entry' entry.id %}" method='post'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button name="sumbit">Save changes</button>
-    </form>
+        <div class="card-body">
+            <form action="{% url 'learning_logs:edit_entry' entry.id %}" method='post'>
+                <p class="card-text">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                </p>
+                <button class="btn btn-primary" name='sumbit'>Save changes</button>
+            </form>
+        </div>
+    </div>
 
 {% endblock content %}
